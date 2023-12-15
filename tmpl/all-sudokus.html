@@ -1,0 +1,25 @@
+<!--
+    type Sudoku struct {
+        Id    string
+        Board [9][9]int // 0: empy, 1-9: number
+        Flag  [9][9]int // 0: not set, 1: set by user, 2: set by program
+    }
+
+    input: []Sudoku
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All pages</title>
+</head>
+<body>
+    <h1>All available pages</h1>
+    <ul>
+        {{range .}}
+        <li><a href="/sudoku/{{.Id}}">Sudoku {{.Id}}</a></li>
+        {{end}}
+    </ul>
+</body>
+</html>
